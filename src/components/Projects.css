@@ -1,0 +1,202 @@
+/* ================================
+   Projects Section
+   ================================ */
+
+.projects {
+  padding: 6rem 2rem;
+}
+
+.projects-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+}
+
+.projects-transition {
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.projects-title {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  color: var(--color-text);
+}
+
+.projects-text {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ================================
+   Grid
+   ================================ */
+
+.projects-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* ================================
+   Project Card
+   ================================ */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  text-decoration: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 25px 60px rgba(0, 0, 0, 0.5);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 40px 90px rgba(0, 0, 0, 0.65);
+}
+
+/* Image */
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ================================
+   Overlay
+   ================================ */
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.6rem;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.15)
+  );
+
+  color: #fff;
+}
+
+.project-overlay h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.project-overlay span {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+}
+
+/* ================================
+   Light Mode
+   ================================ */
+
+html[data-theme="light"] .project-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.75)
+  );
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+html[data-theme="light"] .project-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(255, 255, 255, 0.82)
+  );
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================================
+   Projects CTA
+   ================================ */
+
+.projects-cta {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-viewall {
+  padding: 0.9rem 2.6rem;
+  border-radius: 999px;
+
+  background: var(--color-primary);
+  color: #fff;
+
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+
+  box-shadow: 0 0 26px var(--color-primary-glow);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.projects-viewall:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 38px var(--color-primary-glow);
+}

@@ -1,0 +1,158 @@
+/* ================================
+   Services Page Layout
+   ================================ */
+
+.services-page {
+  min-height: 100vh;
+  padding-top: 8rem; /* clears sticky navbar */
+  padding-bottom: 6rem;
+}
+
+/* ================================
+   Page Header
+   ================================ */
+
+.services-hero {
+  max-width: 760px;
+  margin: 0 auto 5rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.services-transition {
+  display: block;
+  margin: 0 auto 1.2rem;
+  opacity: 0.85;
+}
+
+.services-title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.services-text {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ================================
+   Content
+   ================================ */
+
+.services-content {
+  padding: 0 2rem;
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.2rem;
+}
+
+/* ================================
+   Service Card
+   ================================ */
+
+.service-card {
+  padding: 2.4rem 2.2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.service-card h3 {
+  margin: 1.4rem 0 0.6rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* ================================
+   Icon
+   ================================ */
+
+.service-icon {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ================================
+   Light Mode Adjustments
+   ================================ */
+
+html[data-theme="light"] .services-page .glass {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.6)
+  );
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="light"] .service-icon {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="light"] .service-card:hover {
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================
+   CTA
+   ================================ */
+
+.services-cta {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (max-width: 640px) {
+  .services-page {
+    padding-top: 7rem;
+  }
+
+  .service-card {
+    padding: 2rem;
+  }
+}
