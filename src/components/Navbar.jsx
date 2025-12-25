@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import developer from "../assets/developer.png";
 import "./Navbar.css";
+import sunIcon from "../assets/sun.png";
+import moonIcon from "../assets/moon.png";
 
 function Navbar({ onToggleTheme }) {
   const [open, setOpen] = useState(false);
@@ -50,16 +52,24 @@ function Navbar({ onToggleTheme }) {
 
           {/* Actions */}
           <div className="nav-actions">
-            <div className="theme-switch">
-              <span className="theme-label">Theme</span>
-              <button
-                className="theme-toggle"
-                onClick={onToggleTheme}
-                aria-label="Toggle theme"
-              >
-                <span className="toggle-thumb" />
-              </button>
-            </div>
+            <button
+              className="theme-toggle"
+              onClick={onToggleTheme}
+              aria-label="Toggle theme"
+            >
+              <span className="toggle-thumb">
+                <img
+                  src={
+                    document.documentElement.getAttribute("data-theme") ===
+                    "light"
+                      ? sunIcon
+                      : moonIcon
+                  }
+                  alt=""
+                  className="toggle-icon"
+                />
+              </span>
+            </button>
 
             <Link to="/hire" className="hire-btn">
               Hire Me

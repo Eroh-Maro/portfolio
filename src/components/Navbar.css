@@ -121,7 +121,7 @@
 
 /* Theme toggle */
 .theme-toggle {
-  width: 48px;
+  width: 56px;
   height: 26px;
   padding: 0;
   border-radius: 999px;
@@ -149,7 +149,7 @@
 }
 
 html[data-theme="light"] .toggle-thumb {
-  transform: translateX(22px);
+  transform: translateX(30px);
   background: var(--color-primary);
   box-shadow: 0 0 12px var(--color-primary-glow);
 }
@@ -380,21 +380,22 @@ html[data-theme="light"] .navbar--scrolled {
   user-select: none;
 }
 
-/* Hide text on very small screens */
-@media (max-width: 420px) {
-.theme-switch {
+.toggle-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+
   display: flex;
   align-items: center;
-  gap: 0.35rem; /* tighter */
-}
+  justify-content: center;
 
-.theme-label {
-  font-size: 0.68rem;
-  color: var(--color-text-muted);
-  opacity: 0.6;
-  letter-spacing: 0.02em;
-  user-select: none;
-  white-space: nowrap;
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base);
 }
-
+.toggle-icon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  pointer-events: none;
 }
