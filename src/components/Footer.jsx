@@ -24,7 +24,7 @@ function Footer() {
           <h4>Navigation</h4>
           <Link to="/about">About</Link>
           <Link to="/servicesPage">Services</Link>
-          <Link to="/projects">Projects</Link>
+          {/* <Link to="/projects">Projects</Link> */}
           <Link to="/contact">Contact</Link>
         </div>
 

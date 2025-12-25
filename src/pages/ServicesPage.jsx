@@ -76,7 +76,7 @@ function ServicesPage() {
 
       {/* CTA */}
       <footer className="services-cta">
-        <a href="/contact" className="btn-primary">
+        <a href="/servicesPage" className="btn-primary">
           Hire Me
         </a>
       </footer>
