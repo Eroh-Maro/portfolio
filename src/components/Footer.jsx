@@ -32,13 +32,13 @@ function Footer() {
         <div className="footer-socials">
           <h4>Connect</h4>
           <div className="social-icons">
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/oghenemaro-eroh-379978372" target="_blank" rel="noreferrer">
               <img src={linkedin} alt="LinkedIn" />
             </a>
-            <a href="mailto:youremail@email.com">
+            <a href="mailto:maroeroh@gmail.com">
               <img src={email} alt="Email" />
             </a>
-            <a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/2348149489321" target="_blank" rel="noreferrer">
               <img src={whatsapp} alt="WhatsApp" />
             </a>
           </div>

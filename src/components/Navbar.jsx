@@ -50,13 +50,16 @@ function Navbar({ onToggleTheme }) {
 
           {/* Actions */}
           <div className="nav-actions">
-            <button
-              className="theme-toggle"
-              onClick={onToggleTheme}
-              aria-label="Toggle theme"
-            >
-              <span className="toggle-thumb" />
-            </button>
+            <div className="theme-switch">
+              <span className="theme-label">Theme</span>
+              <button
+                className="theme-toggle"
+                onClick={onToggleTheme}
+                aria-label="Toggle theme"
+              >
+                <span className="toggle-thumb" />
+              </button>
+            </div>
 
             <Link to="/hire" className="hire-btn">
               Hire Me
@@ -77,12 +80,7 @@ function Navbar({ onToggleTheme }) {
       </header>
 
       {/* Backdrop (blur + dim background) */}
-      {open && (
-        <div
-          className="nav-backdrop"
-          onClick={() => setOpen(false)}
-        />
-      )}
+      {open && <div className="nav-backdrop" onClick={() => setOpen(false)} />}
 
       {/* Mobile menu */}
       <div className={`mobile-menu ${open ? "show" : ""}`}>

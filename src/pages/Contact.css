@@ -15,7 +15,7 @@
 .contact-hero {
   max-width: 720px;
   margin: 0 auto 4rem;
-  padding: 0 2rem;
+  padding: 0 18px;
   text-align: center;
 }
 
@@ -37,7 +37,7 @@
    ================================ */
 
 .contact-content {
-  padding: 0 2rem;
+  padding: 0 18px;
 }
 
 .contact-grid {
@@ -125,6 +125,21 @@
   border: none;
   outline: none;
 }
+/* Dark mode glass contrast boost */
+.contact-page .glass {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.10),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
 
 /* ================================
    Light Mode Adjustments

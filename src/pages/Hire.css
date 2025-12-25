@@ -99,15 +99,21 @@
   );
 }
 
+
 /* Stronger card contrast */
 .hire-form.glass,
 .hire-success.glass {
-  background: var(--color-surface-1);
-  border: 1px solid var(--color-border);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.10),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.6),
-    0 24px 60px rgba(0, 0, 0, 0.18);
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* Improve input contrast */
