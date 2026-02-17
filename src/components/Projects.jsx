@@ -1,7 +1,7 @@
 import "./Projects.css";
 import transition from "../assets/transition.png";
 
-import est8 from "../assets/est8.png";
+import studentPortal from "../assets/studentPortal.png";
 import bookStore from "../assets/bookStore.png";
 import delsu from "../assets/delsu.png";
 
@@ -26,28 +26,38 @@ function Projects() {
           rel="noopener noreferrer"
           className="project-card"
         >
-          <img src={est8} alt="EST8 Hub" />
+          <img src={studentPortal} alt="Student Portal" />
           <div className="project-overlay">
-            <h3>EST8 Hub</h3>
-            <span>Real Estate Platform</span>
+            <h3>Student Portal</h3>
+            <span>University Student Portal</span>
           </div>
         </a>
 
-        <div className="project-card" data-aos="zoom-in-up">
+    <a 
+    href="https://book-store-frontend-hgdn.vercel.app"
+    target="_blank"
+          rel="noopener noreferrer"
+          className="project-card"
+    >
+      <div className="project-card" data-aos="zoom-in-up">
           <img src={bookStore} alt="Book Store" />
           <div className="project-overlay">
             <h3>Book Store</h3>
-            <span>UI / UX & Frontend</span>
+            <span>E-Commerce</span>
           </div>
         </div>
 
-        <div className="project-card" data-aos="zoom-in-up">
+    </a>
+        
+        <a href="https://delsu-hub-frontend.vercel.app">
+          <div className="project-card" data-aos="zoom-in-up">
           <img src={delsu} alt="Delsu Event Hub" />
           <div className="project-overlay">
             <h3>Delsu Event Hub</h3>
             <span>Event Management</span>
           </div>
         </div>
+        </a>
       </div>
             {/* View All */}
       <div className="projects-cta" data-aos="zoom-in-up">
