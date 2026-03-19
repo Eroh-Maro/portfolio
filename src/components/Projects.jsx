@@ -21,7 +21,7 @@ function Projects() {
       {/* Grid */}
       <div className="projects-grid">
         <a
-          href="https://est8-hub-frontend.vercel.app"
+          href="https://student-portal-frontend-maoy.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="project-card"
