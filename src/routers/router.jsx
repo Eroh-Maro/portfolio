@@ -6,7 +6,7 @@ import AboutMe from "../pages/AboutMe.jsx";
 import ServicesPage from "../pages/ServicesPage.jsx";
 import Contact from "../pages/Contact.jsx";
 import Hire from "../pages/Hire.jsx";
-
+import ProjectDetail from "../pages/ProjectDetail.jsx";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +32,10 @@ const router = createBrowserRouter([
              {
                 path: "/hire",
                 element: <Hire/>
+            },
+            {
+                path: "/projects/:slug",
+                element: <ProjectDetail/>
             },             
         ]
     },

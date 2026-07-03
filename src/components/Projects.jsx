@@ -1,14 +1,11 @@
+import { Link } from "react-router-dom";
 import "./Projects.css";
 import transition from "../assets/transition.png";
-
-import studentPortal from "../assets/studentPortal.png";
-import bookStore from "../assets/bookStore.png";
-import delsu from "../assets/delsu.png";
+import projects from "../data/projects";
 
 function Projects() {
   return (
     <section className="projects">
-      {/* Intro */}
       <div className="projects-intro" data-aos="fade-up">
         <img src={transition} alt="" className="projects-transition" />
         <h2 className="projects-title">My Portfolio</h2>
@@ -18,54 +15,28 @@ function Projects() {
         </p>
       </div>
 
-      {/* Grid */}
       <div className="projects-grid">
-        <a
-          href="https://student-portal-frontend-maoy.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-card"
-        >
-          <img src={studentPortal} alt="Student Portal" />
-          <div className="project-overlay">
-            <h3>Student Portal</h3>
-            <span>University Student Portal</span>
-          </div>
-        </a>
-
-    <a 
-    href="https://book-store-frontend-hgdn.vercel.app"
-    target="_blank"
-          rel="noopener noreferrer"
-          className="project-card"
-    >
-      <div className="project-card" data-aos="zoom-in-up">
-          <img src={bookStore} alt="Book Store" />
-          <div className="project-overlay">
-            <h3>Book Store</h3>
-            <span>E-Commerce</span>
-          </div>
-        </div>
-
-    </a>
-        
-        <a href="https://delsu-hub-frontend.vercel.app">
-          <div className="project-card" data-aos="zoom-in-up">
-          <img src={delsu} alt="Delsu Event Hub" />
-          <div className="project-overlay">
-            <h3>Delsu Event Hub</h3>
-            <span>Event Management</span>
-          </div>
-        </div>
-        </a>
+        {projects.map((project) => (
+          <Link
+            key={project.slug}
+            to={`/projects/${project.slug}`}
+            className="project-card"
+            data-aos="zoom-in-up"
+          >
+            <img src={project.image} alt={project.title} />
+            <div className="project-overlay">
+              <h3>{project.title}</h3>
+              <span>{project.tagline}</span>
+            </div>
+          </Link>
+        ))}
       </div>
-            {/* View All */}
+
       <div className="projects-cta" data-aos="zoom-in-up">
-        <a href="/portfolio" className="projects-viewall">
+        <Link to="/portfolio" className="projects-viewall">
           View All
-        </a>
+        </Link>
       </div>
-
     </section>
   );
 }
