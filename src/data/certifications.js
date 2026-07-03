@@ -23,9 +23,9 @@ const certifications = [
     role: "Team Captain, Tech Titans",
     highlights: [
       "Led team to victory in the 'Humans vs AI' debate",
-      "Won the hackathon with Connect Abraka, a platform for connecting techies in Abraka",
+      "Won the hackathon with Connect Abraka, a platform for connecting techies in Abraka, Delta state",
     ],
-    skills: ["HTML", "CSS", "JavaScript", "React"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB",],
     verifyUrl: "",
   },
 {
