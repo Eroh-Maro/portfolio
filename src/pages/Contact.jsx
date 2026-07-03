@@ -149,7 +149,7 @@ const sendEmail = async (e) => {
               <li>
                 <span>LinkedIn</span>
                 <a
-                  href="https://www.linkedin.com/in/oghenemaro-eroh-379978372"
+                  href="https://www.linkedin.com/in/oghenemaro-eroh-932314419?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                   target="_blank"
                   rel="noreferrer"
                 >

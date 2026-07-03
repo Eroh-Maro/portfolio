@@ -32,7 +32,7 @@ function Footer() {
         <div className="footer-socials">
           <h4>Connect</h4>
           <div className="social-icons">
-            <a href="https://www.linkedin.com/in/oghenemaro-eroh-379978372" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/oghenemaro-eroh-932314419?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer">
               <img src={linkedin} alt="LinkedIn" />
             </a>
             <a href="mailto:maroeroh@gmail.com">
