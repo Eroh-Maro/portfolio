@@ -8,7 +8,7 @@ function Projects() {
     <section className="projects">
       <div className="projects-intro" data-aos="fade-up">
         <img src={transition} alt="" className="projects-transition" />
-        <h2 className="projects-title">My Portfolio</h2>
+        <h2 className="projects-title">My Projects</h2>
         <p className="projects-text">
           Explore some of my recent projects showcasing my skills in web
           development, UI/UX design, and software engineering.

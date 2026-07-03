@@ -29,7 +29,7 @@ function Stats() {
           <div className="stat-icon">
             <img src={certIcon} alt="" />
           </div>
-          <span className="stat-number">5</span>
+          <span className="stat-number">3</span>
           <span className="stat-label">Certifications</span>
         </div>
 

@@ -7,6 +7,7 @@ import ServicesPage from "../pages/ServicesPage.jsx";
 import Contact from "../pages/Contact.jsx";
 import Hire from "../pages/Hire.jsx";
 import ProjectDetail from "../pages/ProjectDetail.jsx";
+import CertificationDetail from "../pages/CertificationDetail.jsx";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: "/projects/:slug",
                 element: <ProjectDetail/>
+            },
+            {
+                path: "/certifications/:slug",
+                element: <CertificationDetail/>
             },             
         ]
     },
