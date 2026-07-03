@@ -1,6 +1,5 @@
 // src/pages/Hire.jsx
 import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
 import "./Hire.css";
 
 /* ================================
@@ -104,43 +103,42 @@ function Hire() {
      Submit (EmailJS)
   ================================ */
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSending(true);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setSending(true);
 
-    const templateParams = {
-      name: formRef.current.name.value,
-      email: formRef.current.email.value,
-      project_type: projectType,
-      consult_duration: consultDuration || "N/A",
-      pages: pages || "N/A",
-      timeline: timeline || "N/A",
-      features: features.length ? features.join(", ") : "None",
-      description: formRef.current.description.value,
-      referral: formRef.current.referral.value,
-      exact_price: `₦${exactPrice.toLocaleString()}`,
-      price_range: `₦${rangeLow.toLocaleString()} – ₦${rangeHigh.toLocaleString()}`,
-    };
-
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_HIRE_TEMPLATE_ID,
-        templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => {
-        setSubmitted(true);
-        formRef.current.reset();
-      })
-      .catch((err) => {
-        console.error("EmailJS error:", err);
-        alert("Something went wrong. Please try again.");
-      })
-      .finally(() => {
-        setSending(false);
-      });
+  const templateParams = {
+    name: formRef.current.name.value,
+    email: formRef.current.email.value,
+    project_type: projectType,
+    consult_duration: consultDuration || "N/A",
+    pages: pages || "N/A",
+    timeline: timeline || "N/A",
+    features: features.length ? features.join(", ") : "None",
+    description: formRef.current.description.value,
+    referral: formRef.current.referral.value,
+    exact_price: `₦${exactPrice.toLocaleString()}`,
+    price_range: `₦${rangeLow.toLocaleString()} – ₦${rangeHigh.toLocaleString()}`,
   };
+
+  try {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/hire`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(templateParams),
+    });
+
+    if (!res.ok) throw new Error("Request failed");
+
+    setSubmitted(true);
+    formRef.current.reset();
+  } catch (err) {
+    console.error("Hire request error:", err);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    setSending(false);
+  }
+};
 
   return (
     <main className="hire-page">

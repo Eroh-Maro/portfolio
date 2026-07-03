@@ -1,6 +1,5 @@
 import "./Contact.css";
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 
 import transition from "../assets/transition.png";
 
@@ -9,30 +8,32 @@ function Contact() {
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState(null); // "success" | "error" | null
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setIsSending(true);
-    setStatus(null);
+const sendEmail = async (e) => {
+  e.preventDefault();
+  setIsSending(true);
+  setStatus(null);
 
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID,
-        formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => {
-        setStatus("success");
-        formRef.current.reset();
-      })
-      .catch((error) => {
-        console.error(error);
-        setStatus("error");
-      })
-      .finally(() => {
-        setIsSending(false);
-      });
-  };
+  const formData = new FormData(formRef.current);
+  const payload = Object.fromEntries(formData.entries());
+
+  try {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) throw new Error("Request failed");
+
+    setStatus("success");
+    formRef.current.reset();
+  } catch (error) {
+    console.error(error);
+    setStatus("error");
+  } finally {
+    setIsSending(false);
+  }
+};
 
   return (
     <main className="contact-page">
