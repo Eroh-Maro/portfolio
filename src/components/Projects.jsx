@@ -32,11 +32,11 @@ function Projects() {
         ))}
       </div>
 
-      <div className="projects-cta" data-aos="zoom-in-up">
+      {/* <div className="projects-cta" data-aos="zoom-in-up">
         <Link to="/portfolio" className="projects-viewall">
           View All
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 }
