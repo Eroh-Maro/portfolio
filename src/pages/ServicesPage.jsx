@@ -11,12 +11,6 @@ function ServicesPage() {
     <main className="services-page">
       {/* Page Header */}
       <header className="services-hero" data-aos="fade-up">
-        <img
-          src={transition}
-          alt=""
-          className="services-transition"
-          aria-hidden="true"
-        />
 
         <h1 className="services-title">Services</h1>
         <p className="services-text">
@@ -24,6 +18,13 @@ function ServicesPage() {
           digital products with clarity and intention.
         </p>
       </header>
+              {/* <img
+          src={transition}
+          alt=""
+          className="services-transition"
+          aria-hidden="true"
+        /> */}
+
 
       {/* Services Grid */}
       <section className="services-content">
@@ -38,6 +39,8 @@ function ServicesPage() {
               architecture.
             </p>
           </article>
+
+          
 
           <article className="service-card glass">
             <div className="service-icon">
