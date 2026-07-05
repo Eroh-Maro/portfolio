@@ -7,16 +7,16 @@ function About() {
     <section className="about">
       {/* Intro */}
 <div className="about-intro" data-aos="fade-up">
-  <img src={transition} alt="" className="about-transition" />
+  
 
   <img
     src={profilePhoto}
     alt="Eroh Oghenemaro Divine"
     className="about-photo"
   />
-
+  
   <h1 className="about-title">About Me</h1>
-
+<img src={transition} alt="" className="about-transition" />
   <p className="about-text">
     Hi, I'm <strong>Eroh Oghenemaro Divine</strong>, a software engineer and digital
     problem solver based in Delta State, Nigeria. I build clean,
