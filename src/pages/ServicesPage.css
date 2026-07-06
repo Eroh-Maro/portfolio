@@ -4,7 +4,7 @@
 
 .services-page {
   min-height: 100vh;
-  padding-top: 8rem; /* clears sticky navbar */
+  padding-top: 4rem; /* clears sticky navbar */
   padding-bottom: 6rem;
 }
 
