@@ -39,11 +39,11 @@ const sendEmail = async (e) => {
     <main className="contact-page">
       {/* Header */}
       <header className="contact-hero" data-aos="fade-up">
-        <img
+        {/* <img
           src={transition}
           alt=""
           className="contact-transition"
-        />
+        /> */}
 
         <h1 className="contact-title">Contact</h1>
 
