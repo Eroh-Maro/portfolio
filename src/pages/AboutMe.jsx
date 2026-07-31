@@ -17,10 +17,12 @@ function About() {
   
   <h1 className="about-title">About Me</h1>
   <p className="about-text">
-    Hi, I'm <strong>Eroh Oghenemaro Divine</strong>, a software engineer and digital
-    problem solver based in Delta State, Nigeria. I build clean,
-    scalable, and user-focused applications with a strong balance of
-    design and engineering.
+    Hi, I'm <strong>Eroh Oghenemaro Divine</strong>, a Backend-focused software engineer experienced
+     in designing and deploying production-grade REST APIs, authentication systems, and role-based
+      access control using Node.js, Express, and the MERN stack. Experienced across MongoDB and PostgreSQL,
+       building secure backend architectures, third-party integrations, and scalable production applications. 
+       Proven ability to translate complex business requirements into well-structured backend systems from 
+       architecture through deployment.
   </p>
 
   <p className="about-text">
